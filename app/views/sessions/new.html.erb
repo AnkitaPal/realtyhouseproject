@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" media="screen" href="/assets/application.scss")">
+            <link rel="shortcut icon" type="image/png" href="/assets/icon.png")">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <style>
+            #content{
+                background-color: #eff1f4;
+                width: 500px;
+                height: 520px;
+                border: 50px lightgrey;
+                padding: 30px;
+                margin-top: 5%;
+                margin-bottom: 5%;
+                box-shadow: 2px 5px #c4c5c6;
+            }
+            .container{
+                width:960px;
+                margin:0 px auto;
+            }
+        </style>
+        </head>
+        <body>
+<% provide(:title, "Log in") %>
+<% if flash[:alert] %>
+	<p id="notice"><%= flash[:alert] %></p>
+	<% end %>
+            <div class="container" id="content">
+                <img src="/assets//logo.png")" style="width:250px; height:170px; display:block; margin:auto;">
+                <h4 style="text-align: center;">Welcome to Royal Realty House</h4>
+
+                <div class="row">
+  <div class="col-md-12 col-md-offset-0">
+    <%= form_for(:session, url: login_path) do |f| %>
+
+      <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control' %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control' %>
+<br>
+      <%= f.submit "Login", class: "btn btn-primary btn-block" %>
+    <% end %>
+
+    </div>
+</div>
+
+            </div>
+        </body>
+    </html>
+
