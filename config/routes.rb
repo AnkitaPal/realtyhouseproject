@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   	get		'/aboutus',  to:'welcome#aboutus'
   	
   	get 	'/dashboard', to:'agent#index'
+  	get		'/profile',	to:'agent#show'
 
 	get  	'/login', to:'sessions#new'
 	post 	'/login', to:'sessions#create'
