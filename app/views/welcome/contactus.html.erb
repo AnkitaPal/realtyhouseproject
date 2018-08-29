@@ -13,8 +13,8 @@
                 #box{
                     position: relative;
                     width: 100%;
-                    min-width: 550px;
-                    max-width: 800px;
+                    min-width: 500px;
+                    max-width: 750px;
                     border: 2px solid black;
                     padding: 2%;
                     box-shadow: 5px 10px #888888;
@@ -22,13 +22,15 @@
                     margin-left: auto;
                     margin-right: auto;
                     display: block;
+                    margin-top: -100px;
+                    background-color: white;
                 }
                 #left {
                     position: relative;
                     float: left;
                     width: 65%;
                     margin: 0;
-                    padding-right: 150px;
+                    padding-right: 100px;
                     border-right: 2px solid black;
                     height:550px;
                 }
@@ -41,21 +43,26 @@
                     height:550px;
                 }
                 input[type=text], select, textarea {
-                    width: 100%;
+                    width: 80%;
                     padding: 12px;
-                    border-bottom: 2px solid #4f5866;
+                    border-bottom: 1px solid #4f5866;
                     border-top: none;
                     border-right: none;
                     border-left: none; 
-                    margin-top: 3px;
-                    margin-bottom: 16px;
+                    margin-top: 1px;
+                    margin-bottom: 19px;
                     resize: vertical;
+                }
+                input[type=text]:focus{
+                    outline: none; 
+                   
                 }
                 button{
                     border:0;
                     background:none;
                     float: right; 
-                    padding-top: 5px;
+                    padding-top: 110px;
+                    outline: none; 
                     /*And other css to remove the default button property */    
                 }
             </style>
@@ -63,28 +70,45 @@
         <body>
             <%= render 'navbarStaticPages' %>
             <img src="/assets/contactus_header.png" alt="Contact_header" style="width:100%;">
-            
-
             <div class="container">
                 <div class="pageContentWrapper">
                     <div id="box">
                         <div id="left">
-                            <h4 style="color: #27487c;"> Send Us Message </h4>
+                            <h4 style="color: #27487c;"> Send Us Message </h4><br>
                             <form action="#">
                                 <label for="fname">Your name</label>
-                                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                                <br><input type="text" id="fname" name="firstname" placeholder="name..">
                                 <label for="fname">Your E-mail Adress</label>
-                                <input type="text" id="fname" name="firstname" placeholder="Your E-mail Adress..">
+                                <input type="text" id="fname" name="firstname" placeholder="E-mail Adress..">
                                 <label for="fname">Your Phone number</label>
-                                <input type="text" id="fname" name="firstname" placeholder="Your phone number">
+                                <input type="text" id="fname" name="firstname" placeholder="phone number..">
                                 <label for="subject">Your Message</label>
-                                <textarea id="subject" name="subject" placeholder="Write something.." style="height:150px"></textarea><button type="submit"><i class="fa fa-paper-plane-o" style="font-size:45px; color: #27487c;"></i></button>
+                                <textarea id="subject" name="subject" placeholder="Write something.." style="height:150px"></textarea>
+                                &nbsp;&nbsp;<button type="submit"><i class="fa fa-paper-plane-o" style="font-size:40px; color: #27487c;"></i></button>
                             </form>
                             
 
                         </div>
                         <div id="right">
                             <h4 style="color: #27487c"> Contact Information </h4>
+                            <p style="font-size: 16px; padding-top: 30px; "><i class="fa fa-mobile-phone" style="font-size:40px; vertical-align:middle;"></i>&nbsp; 917.346.6412</p>
+                            <p style="font-size: 16px;padding-top: 30px;"><i class="fa fa-envelope-o" style="font-size:35px; vertical-align:middle"></i>&nbsp; info@rrh.com</p>
+                            <p style="font-size: 16px; padding-top: 30px;"><i class="fa fa-map-marker" style="font-size:40px; vertical-align:middle"></i>&nbsp; 286 Fifth Avenue 8th Floor, New York, New York 10001 </p>
+
+                            <div class="social" style="padding-top: 140px;">
+                                  <a target="_blank" href="#" style="color: black">
+                                      <i class="fa fa-twitter" style="font-size:30px"></i>
+                                  </a>&nbsp;&nbsp;&nbsp;
+                                  <a target="_blank" href="#" style="color: black">
+                                      <i class="fa fa-facebook-square" style="font-size:30px"></i>
+                                  </a>&nbsp;&nbsp;&nbsp;
+                                  <a target="_blank" href="#" style="color: black">
+                                      <i class="fa fa-instagram" style="font-size:30px"></i>
+                                  </a>&nbsp;&nbsp;&nbsp;
+                                  <a target="_blank" href="#" style="color: black">
+                                      <i class="fa fa-linkedin" style="font-size:30px"></i>
+                                  </a>
+                            </div>
                         </div>
                     </div>
                 </div>

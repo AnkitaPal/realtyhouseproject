@@ -8,14 +8,82 @@
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+            <style type="text/css">
+                .box_about{
+                    position: relative;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 100%;
+                    min-width: 500px;
+                    max-width: 650px;
+                    display: block;
+                    padding: 3%;
+                    border: 2px solid #dcdee2;
+                    background-color: #dcdee2;
+                }
+                .box_mission{
+                    position: relative;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 100%;
+                    min-width: 500px;
+                    max-width: 650px;
+                    padding: 3%;
+                    border: 2px solid #dcdee2;
+                    background-color: #dcdee2;
+
+                }
+                .box_people{
+                    position: relative;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 100%;
+                    min-width: 500px;
+                    max-width: 650px;
+                    padding: 3%;
+                    border: 2px solid #dcdee2;
+                    background-color: #dcdee2;
+
+                }
+            </style>
         </head>
         <body>
             <%= render 'navbarStaticPages' %>
+            <img src="/assets/aboutus_header.png" alt="about_header" style="width:100%; height: 450px;">
+            
             <div class="container">
                 <div class="pageContentWrapper">
-                    <h3>Agents Dashboard Page</h3>
-                    <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).</p>
-                    <p>Only when the button is clicked, the navigation bar will be displayed.</p>
+                    <br><br>
+                    <div class="box_about">
+                        <h4 style="text-align: center"> Our Mission </h4>
+                        <hr><br>
+                        Redox Realty Group is a New York based brokerage firm that walks buyers and sellers through the process of offering a home. Our corporate goal is to help motivated individuals reach their financial objectives. As a cooperative team of brokers, we guide and train you to close your deals effectively. Drawing from over 20 years of experience in the residential market, our head broker is accessible 24/7 for resource questions- atevery step of the transaction. We show you just how to build & keep your client base. 
+                    </div>
+                    <br><br>
+                    <div class="box_mission">
+                        <h4 style="text-align: center">Why Choose Us?</h4>
+                        <hr><br>
+                       <center> <i class="fa fa-money" aria-hidden="true" style="font-size:20px"></i>   100% commission &emsp;&emsp;
+                        <span class="glyphicon glyphicon-education" style="font-size:20px"></span>  Training and Leads &emsp;&emsp;
+                        <i class="fas fa-ad" aria-hidden="true" style="font-size:20px"></i>   Paid Advertising &emsp;&emsp;
+                        <br><br>
+                        <img src="/assets/working_env.png">  Great work environment &emsp;
+                        <img src="/assets/insurance.png">  E&O insurance &emsp;
+                        <img src="/assets/rebate.png" height="20px" width="20px"> Home-buyer rebate programs &emsp;
+                        <br><br>
+                        <img src="/assets/innovation.png">  Branding & Technology &emsp;</center>
+                    </div>
+                    <br><br>
+                    <div class="box_people">
+                        <h4 style="text-align: center">Meet the Team</h4>
+                        <hr><br>
+                        <img src="/assets/person1.png" height="150px" width="180px">&emsp;&nbsp;
+                        <img src="/assets/person2.jpg" height="150px" width="180px">&emsp;
+                        <img src="/assets/person3.jpg" height="150px" width="180px">
+                        
+                    </div>
                 </div>
             </div>
             <%= render 'footerStaticPages' %>
