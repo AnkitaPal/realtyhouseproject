@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" media="screen" href="/assets/application.scss">
+            <link rel="shortcut icon" type="image/png" href="/assets/icon.png">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <style type="text/css">
+                #box{
+                    position: relative;
+                    width: 100%;
+                    min-width: 550px;
+                    max-width: 800px;
+                    border: 2px solid black;
+                    padding: 2%;
+                    box-shadow: 5px 10px #888888;
+                    overflow: auto;
+                    margin-left: auto;
+                    margin-right: auto;
+                    display: block;
+                }
+                #left {
+                    position: relative;
+                    float: left;
+                    width: 65%;
+                    margin: 0;
+                    padding-right: 150px;
+                    border-right: 2px solid black;
+                    height:550px;
+                }
+                #right{
+                    position: relative;
+                    float: left;
+                    width: 35%;
+                    margin-top: 2px;
+                    padding-left: 20px;
+                    height:550px;
+                }
+                input[type=text], select, textarea {
+                    width: 100%;
+                    padding: 12px;
+                    border-bottom: 2px solid #4f5866;
+                    border-top: none;
+                    border-right: none;
+                    border-left: none; 
+                    margin-top: 3px;
+                    margin-bottom: 16px;
+                    resize: vertical;
+                }
+                button{
+                    border:0;
+                    background:none;
+                    float: right; 
+                    padding-top: 5px;
+                    /*And other css to remove the default button property */    
+                }
+            </style>
+        </head>
+        <body>
+            <%= render 'navbarStaticPages' %>
+            <img src="/assets/contactus_header.png" alt="Contact_header" style="width:100%;">
+            
+
+            <div class="container">
+                <div class="pageContentWrapper">
+                    <div id="box">
+                        <div id="left">
+                            <h4 style="color: #27487c;"> Send Us Message </h4>
+                            <form action="#">
+                                <label for="fname">Your name</label>
+                                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                                <label for="fname">Your E-mail Adress</label>
+                                <input type="text" id="fname" name="firstname" placeholder="Your E-mail Adress..">
+                                <label for="fname">Your Phone number</label>
+                                <input type="text" id="fname" name="firstname" placeholder="Your phone number">
+                                <label for="subject">Your Message</label>
+                                <textarea id="subject" name="subject" placeholder="Write something.." style="height:150px"></textarea><button type="submit"><i class="fa fa-paper-plane-o" style="font-size:45px; color: #27487c;"></i></button>
+                            </form>
+                            
+
+                        </div>
+                        <div id="right">
+                            <h4 style="color: #27487c"> Contact Information </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%= render 'footerStaticPages' %>
+        </body>
+</html>

@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
-	root	'welcome#home'
+	root	'welcome#index'
 	
   	get 	'/addnew', to:'users#new'
-  	get		'/home',  to:'welcome#home'
+  	get		'/home',  to:'welcome#index'
   	get		'/aboutus',  to:'welcome#aboutus'
+    get   '/contactus', to:'welcome#contactus'
   	
   	get 	'/dashboard', to:'agent#index'
   	get		'/profile',	to:'agent#show'
