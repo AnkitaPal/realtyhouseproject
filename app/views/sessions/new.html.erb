@@ -10,47 +10,71 @@
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
             <style>
-                #content{
-                    background-color: #eff1f4;
-                    width: 500px;
-                    height: 520px;
-                    border: 50px lightgrey;
-                    padding: 30px;
-                    margin-top: 7%;
-                    margin-bottom: 5%;
-                    box-shadow: 2px 5px #c4c5c6;
+                .bg-img {
+                    /* The image used */
+                    background-image: url("/assets/background_login2.jpg");
+
+                    min-height: 650px;
+
+                    /* Center and scale the image nicely */
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    position: relative;
                 }
-                .container{
-                    width:960px;
-                    margin:0 px auto;
+
+                /* Full-width input fields */
+                
+                .box_login{
+                    position: relative;
+                    margin-top: 100px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 100%;
+                    min-width: 300px;
+                    max-width: 450px;
+                    padding: 4%;
+                    border: 2px solid #d9e4f4;
+                    background-color: #d9e4f4;
+                }
+                * {
+                    box-sizing: border-box;
                 }
             </style>
         </head>
         <body>
-            <%= render 'navbarStaticPages' %>
-            <div class="container" id="content">
-                <% if flash[:alert] %>
-                    <p id="notice"><%= flash[:alert] %></p>
-                <% end %>
-                <img src="/assets/redox_logo.png")" style="width:300px; height:250px; display:block; margin:auto;">
-                <h4 style="text-align: center;">Welcome to Redox Realty Group</h4>
-
-                <div class="row">
-                    <div class="col-md-12 col-md-offset-0">
-                        <%= form_for(:session, url: login_path) do |f| %>
-
-                            <%= f.label :email %>
-                            <%= f.email_field :email, class: 'form-control' %>
-                            <br>
-                            <%= f.label :password %>
-                            <%= f.password_field :password, class: 'form-control' %>
-                            <br>
-                            <%= f.submit "Login", class: "btn btn-primary btn-block" %>
-                        <% end %>
+            <%= render '/welcome/navbarStaticPages' %>
+            <div class="bg-img">
+                <br><br><br>
+                <div class="container">
+                    <% if flash[:alert] %>
+                        <p id="notice"><%= flash[:alert] %></p>
+                    <% end %>
+                    <div class="col-md-4 col-sm-4 col-xs-12 col-xs-offset-1 col-sm-offset-0">
+                        <img src="/assets/redox_logo.png" style="width:280px; height:251px; display:block; margin:auto; margin-top: 150px;">
                     </div>
+                    <div class="col-md-8 col-sm-7 col-xs-12 ">
+                        <div class="box_login">
+                            <h4 style="text-align: center;">Welcome to Redox Realty Group</h4>
+                            <%= form_for(:session, url: login_path) do |f| %>
+
+                                <%= f.label :email %>
+                                <%= f.email_field :email, class: 'form-control' %>
+                                <br>
+                                <%= f.label :password %>
+                                <%= f.password_field :password, class: 'form-control' %>
+                        
+                                <div class="checkbox">
+                                    <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+                                </div>
+                                <%= f.submit "Login", class: "btn btn-success btn-block" %>
+                                <br><span class="psw"> <a href="#">Forgot password?</a></span>
+
+                            <% end %>
+                        </div>
+                    </div>  
                 </div>
             </div>
-            <%= render 'footerStaticPages' %>
+            <%= render '/welcome/footerStaticPages' %>
         </body>
     </html>
-
