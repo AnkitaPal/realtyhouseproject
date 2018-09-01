@@ -2,6 +2,14 @@
     <html lang="en">
         <head>
             <style type="text/css">
+            .header {
+                    padding: 15%;
+                    text-align: center;
+                    background-image: url("assets/contactus_header.png");
+                    background-size: cover;
+                    color: white;
+                    font-size: 30px;
+                }
                 #box{
                     position: relative;
                     width: 100%;
@@ -62,7 +70,10 @@
         </head>
         <body>
             <%= render 'navbarStaticPages' %>
-            <img src="/assets/contactus_header.png" alt="Contact_header" style="width:100%;">
+            
+            <div class="header">
+                <h1 style="color: black;">Contact Us</h1>
+            </div>
             <div class="container">
                 <div class="pageContentWrapper">
                     <div id="box">

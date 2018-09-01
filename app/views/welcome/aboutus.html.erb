@@ -2,6 +2,14 @@
     <html lang="en">
         <head>
             <style type="text/css">
+                .header {
+                    padding: 15%;
+                    text-align: center;
+                    background-image: url("assets/aboutus_header.png");
+                    background-size: cover;
+                    color: white;
+                    font-size: 30px;
+                }
                 .box_about{
                     position: relative;
                     margin-left: auto;
@@ -35,13 +43,42 @@
                     padding: 3%;
                     border: 2px solid #dcdee2;
                     background-color: #dcdee2;
+                    padding-left: 50px;
+                }
+                * {
+                    box-sizing: border-box;
 
                 }
+                .col-25 {
+                    float: left;
+                    width: 33%;
+                    margin-top: 6px;
+                }
+                .row:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }
+                
+                /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+                @media screen and (max-width: 600px) {
+                    
+                    .box_about, .box_mission, .box_people, .col-25{
+                        width: 100%;
+                        margin-top: 0;
+                        margin-left: auto;
+                        margin-right: auto;
+                        display: block;
+                    }
+                }
+                
             </style>
         </head>
         <body>
             <%= render 'navbarStaticPages' %>
-            <img src="/assets/aboutus_header.png" alt="about_header" style="width:100%; height: 450px;">
+            <div class="header">
+                <h1>About Us</h1>
+            </div>
             
             <div class="container">
                 <div class="pageContentWrapper">
@@ -68,11 +105,32 @@
                     <br><br>
                     <div class="box_people">
                         <h4 style="text-align: center">Meet the Team</h4>
-                        <hr><br>
-                        
-                        <img src="/assets/person1.png" height="180px" width="180px">&emsp;&nbsp;
-                        <img src="/assets/person2.png" height="180px" width="180px">&emsp;
-                        <img src="/assets/person3.png" height="180px" width="180px">
+                        <hr>
+                        <div class="row">
+                            <div class="col-25">
+                                <img src="/assets/person1.png" height="180px" width="180px">
+                                <center>
+                                    <h4>Mike Ross</h4>
+                                    <p>CEO & Founder</p>
+                                </center>
+                            </div>
+                            <div class="col-25">
+                                <img src="/assets/person2.png" height="180px" width="180px">
+                                <center>
+                                    <h4>Jane Doe</h4>
+                                    <p>Company Founder</p>
+                                </center>
+                            </div>
+                            <div class="col-25">
+                                <img src="/assets/person3.png" height="180px" width="180px">
+                                <center>
+                                    <h4>Mickle Davidson</h4>
+                                    <p>Vice President</p>
+                                </center>
+                            </div>
+
+                        </div>
+                    
                     </div>
                 </div>
             </div>
