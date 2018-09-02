@@ -2,28 +2,6 @@
 <html lang="en">
     <head>
         <style type="text/css">
-            .bg-img {
-                /* The image used */
-                background-image: url("/assets/working_together.jpg");
-                min-height: 700px;
-                max-height: 750px;
-                /* Center and scale the image nicely */
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                position: relative;
-            }
-            .box_feature{
-                position: relative;
-                width: 100%;
-                min-width: 300px;
-                max-width: 450px;   
-                border: 2px solid #dcdee2;
-                background-color: #dcdee2;
-                margin-top: 95px;
-                float: right;
-                margin-right: 50px;
-            }
             .checked {
                 color: orange;
             }
@@ -37,11 +15,89 @@
                 margin-top: 50px;
                 margin-bottom: 50px;
             }
-            p{
+            #comment_text{
                 font-family: "Times New Roman", Times, serif;
                 font-size: 18px;
             }
-                
+            
+           .features_block {
+                padding: 50px 0;
+                text-align: center;
+            }
+            *, *:after, *:before {
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                -webkit-font-smoothing: antialiased;
+                font-smoothing: antialiased;
+                text-rendering: optimizeLegibility;
+            }
+
+            .content-block {
+                width: 95%;
+                max-width: 1372px;
+                position: relative;
+                margin: 0 auto;
+                -webkit-transition: all 0.4s;
+                -moz-transition: all 0.4s;
+                -ms-transition: all 0.4s;
+                -o-transition: all 0.4s;
+                transition: all 0.4s;
+            }
+            @media screen and (max-width: 1599px){
+                .content-block {
+                    width: 95%;
+                    max-width: 95%;
+                    position: relative;
+                    margin: 0 auto;
+                }
+            }
+
+            .block-title {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 3.125em;
+                line-height: 1;
+                text-transform: capitalize;
+                font-weight: 700;
+                margin: 0.25em 0;
+            }
+            @media screen and (max-width: 480px){
+                .block-title {
+                    font-size: 2.063em;
+                }
+            }
+            h1 {
+                font-size: 2em;
+                margin: 0.67em 0;
+            }
+            .features_block .reasons_list {
+                margin: 0;
+                padding: 0;
+            }
+            .clearfix {
+                display: block;
+            }
+            .clearfix {
+                display: inline-block;
+            }
+
+            .features_block .reasons_list li {
+                list-style: none;
+                display: inline-block;
+                width: 30%;
+                max-width: 265px;
+                margin: 15px 50px;
+                vertical-align: top;
+                height: 220px;
+            }
+            @media screen and (max-width: 480px){
+                .features_block .reasons_list li {
+                width: 100%;
+                }
+            }
+            .features_block .reasons_list li .icon {
+                height: 95px;
+                margin-bottom: 30px;
+            }   
         </style>
         <script type="text/javascript">
             $(document).ready(function() {
@@ -66,19 +122,19 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <img src="/assets/landing_img1.jpg" alt="img1" style="width:100%;">
+                    <img src="/assets/landingpage1.png" alt="img1" style="width:100%;">
                 </div>
                 <div class="item">
-                    <img src="/assets/landing_img2.jpg" alt="img2" style="width:100%;">
+                    <img src="/assets/landingpage2.png" alt="img2" style="width:100%;">
                 </div>
                 <div class="item">
-                    <img src="/assets/landing_img3.jpg" alt="img3" style="width:100%;">
+                    <img src="/assets/landingpage3.png" alt="img3" style="width:100%;">
                 </div>
                 <div class="item">
-                    <img src="/assets/landing_img4.png" alt="img4" style="width:100%;">
+                    <img src="/assets/landingpage4.png" alt="img4" style="width:100%;">
                 </div>
                 <div class="item">
-                    <img src="/assets/landing_img5.jpg" alt="img5" style="width:100%;">
+                    <img src="/assets/landingpage5.png" alt="img5" style="width:100%;">
                 </div>
             </div>
             <!-- Left and right controls -->
@@ -91,6 +147,58 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+        <!-- Why choose us> -->
+        <div class="features_block" id="features">
+            <div class="content-block">
+                <h1 class="block-title">Why Choose Us?</h1><br>
+                <ul class="reasons_list clearfix">
+                    <li>
+                        <div class="icon"><img src="/assets/commision_index.png" alt="" style="width: 100px; height: 100px;">
+                        </div>
+                        <div class="text"><p><strong>100% commission</strong><br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum porttitor malesuada. </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon"><img src="/assets/training_index.png" alt="" style="width: 100px; height: 100px;">
+                        </div>
+                        <div class="text"><p><strong>Training and Leads</strong><br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum porttitor malesuada. </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon"><img src="/assets/Paid_advertising_index.png" alt="" style="width: 100px; height: 100px;">
+                        </div>
+                        <div class="text"><p><strong>Paid Advertising</strong><br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum porttitor malesuada. </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon"><img src="/assets/team_index.png" alt="" style="width: 100px; height: 100px;"></div>
+                        <div class="text"><p><strong>Great work environment</strong><br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum porttitor malesuada. </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon"><img src="/assets/insurance_index.png" alt="" style="width: 100px; height: 100px;"></div>
+                        <div class="text"><p><strong>E&O insurance</strong><br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum porttitor malesuada. </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon"><img src="/assets/rebate_index.png"" alt="" style="width: 100px; height: 100px;"></div>
+                        <div class="text"><p><strong>Home-buyer rebate programs</strong><br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum porttitor malesuada. </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+
+
+
+<!--
         <div class="row">
             <div class="bg-img">
                 <div class="col-md-12" >
@@ -99,10 +207,10 @@
                         <hr><br>
                         <ul>
                             <li>
-                                <i class="fa fa-money" aria-hidden="true" style="font-size:20px"></i>&emsp; 100% commission
+                                <img src="/assets/commision_index.png" style="height: 64px; width: 64px; border-radius: 50%;">&emsp; 100% commission
                             </li><br>
                             <li>
-                                <span class="glyphicon glyphicon-education" style="font-size:20px"></span>&emsp;Training and Leads
+                                <img src="/assets/training_index.png" style="height: 64px; width: 64px; border-radius: 50%;">&emsp;Training and Leads
                             </li><br>
                             <li>
                                 <i class="fas fa-ad" aria-hidden="true" style="font-size:20px"></i> &emsp;Paid Advertising 
@@ -123,14 +231,78 @@
                     </div>
                 </div>
             </div>
+        </div>-->
+        
+        <!-- Why choose us feartues 
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <img src="/assets/commision_index.png" class="border_img">
+                    <div class="feature">
+                        <p id="feature_text">100% Commission</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="/assets/training_index.png" class="border_img">
+                    <div class="feature">
+                        <p id="feature_text">Training and Leads</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="/assets/Paid_advertising_index.png" class="border_img">
+                    <div class="feature">
+                        <p id="feature_text">Paid Advertising</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="/assets/team_index.png" class="border_img">
+                    <div class="feature">
+                        <p id="feature_text">Great work environment</p>
+                    </div>
+                </div>
+            </div>
         </div>
+        <div class="row" >
+            <div class="column">
+                <div class="card">
+                    <img src="/assets/insurance_index.png" class="border_img">
+                    <div class="feature">
+                        <p id="feature_text">E&O insurance</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="/assets/rebate_index.png" class="border_img">
+                    <div class="feature">
+                        <p id="feature_text">Home-buyer rebate programs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="/assets/technology_index.png" class="border_img">
+                    <div class="feature">
+                        <p id="feature_text">Branding & Technology</p>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+
+        <!-- User Comments and rating -->
         <div id="commentCarousel" class="carousel slide" data-ride="carousel">
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <div class="item active">
                     <div class="col-md-5 col-md-offset-1">
                         <div class="comment">
-                            <p>
+                            <p id="comment_text">
                                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec volutpat erat non erat vehicula porta. Sed finibus consequat purus, viverra tellus pulvinar eget. Sed vitae sodales justo. Nam congue tortor ac vestibulum blandit. In egestas, erat ut molestie feugiat, diam lectus maximus magna, non iaculis diam purus vel urna. "
                                 <p style="float: right;"> - Jon Doe</p>
                                 <span class="fa fa-star checked"></span>
@@ -144,7 +316,7 @@
                     </div>
                     <div class="col-md-5">
                         <div class="comment">
-                            <p>
+                            <p id="comment_text">
                                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec volutpat erat non erat vehicula porta. Sed finibus consequat purus, viverra tellus pulvinar eget. Sed vitae sodales justo. Nam congue tortor ac vestibulum blandit. In egestas, erat ut molestie feugiat, diam lectus maximus magna, non iaculis diam purus vel urna. "
                                 <p style="float: right;"> - Martin Lui</p>
                                 <span class="fa fa-star checked"></span>
@@ -159,7 +331,7 @@
                 <div class="item">
                     <div class="col-md-5 col-md-offset-1">
                         <div class="comment">
-                            <p>
+                            <p id="comment_text">
                                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec volutpat erat non erat vehicula porta. Sed finibus consequat purus, viverra tellus pulvinar eget. Sed vitae sodales justo. Nam congue tortor ac vestibulum blandit. In egestas, erat ut molestie feugiat, diam lectus maximus magna, non iaculis diam purus vel urna. "
                                 <p style="float: right;"> - John William</p>
                                 <span class="fa fa-star checked"></span>
@@ -173,7 +345,7 @@
                     </div>
                     <div class="col-md-5">
                         <div class="comment">
-                            <p>
+                            <p id="comment_text">
                                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec volutpat erat non erat vehicula porta. Sed finibus consequat purus, viverra tellus pulvinar eget. Sed vitae sodales justo. Nam congue tortor ac vestibulum blandit. In egestas, erat ut molestie feugiat, diam lectus maximus magna, non iaculis diam purus vel urna. "
                                 <p style="float: right;"> - Laura Jhonson</p>
                                 <span class="fa fa-star checked"></span>
@@ -187,6 +359,7 @@
                 </div>
             </div>
         </div>
+
         <script>
             $(document).ready(function () {
                 $('.carousel').carousel({

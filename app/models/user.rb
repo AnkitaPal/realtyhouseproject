@@ -7,10 +7,10 @@ class User < ApplicationRecord
 		#user = User.where(["email = ?", email]).first
 		#user = User.where("email = ? AND password = ?", email,  password)
 		#logger.debug user.id
-		logger.debug "email: "+user.email.to_s
+		#logger.debug "email: "+user.email.to_s
 		#logger.debug user.password
 		return nil if user.nil?
 		#return user
-		return user if user.password==password
+		return user if user.password?
 	end
 end
