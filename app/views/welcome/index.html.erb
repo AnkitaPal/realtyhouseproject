@@ -97,7 +97,30 @@
             .features_block .reasons_list li .icon {
                 height: 95px;
                 margin-bottom: 30px;
-            }   
+            }  
+
+            .text-block {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: transparent;
+                padding-left: 20px;
+                padding-right: 20px;
+            } 
+            .btn {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
         </style>
         <script type="text/javascript">
             $(document).ready(function() {
@@ -116,26 +139,38 @@
                 <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
                 <li data-target="#myCarousel" data-slide-to="3"></li>
-                <li data-target="#myCarousel" data-slide-to="4"></li>
+                <!--<li data-target="#myCarousel" data-slide-to="4"></li>-->
             </ol>
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <img src="/assets/landingpage1.png" alt="img1" style="width:100%;">
+                    <img src="/assets/landingpage1.png" alt="img1" style="width:100%; opacity: 0.6">
+                    <div class="text-block">
+                        <h4 style="color:#1f3354; font-size: 50px;">Join Our Team?</h4>
+                        <br><a href="/contactus" class="btn btn-primary btn-lg" role="button" id="btn">Contact Us</a>
+                    </div> 
                 </div>
                 <div class="item">
-                    <img src="/assets/landingpage2.png" alt="img2" style="width:100%;">
+                    <img src="/assets/landingpage2.png" alt="img2" style="width:100%; opacity: 0.6">
+                    <div class="text-block">
+                        <h4 style="color:#d6350c; font-size: 50px;">Meet Our Team</h4>
+                        <br><a href="/aboutus" class="btn btn-primary btn-lg" role="button" id="btn">About Us</a>
+                    </div> 
                 </div>
                 <div class="item">
-                    <img src="/assets/landingpage3.png" alt="img3" style="width:100%;">
+                    <img src="/assets/landingpage3.png" alt="img3" style="width:100%; opacity: 0.6">
+                    <div class="text-block">
+                        <h4 style="color:#bc2356; font-size: 50px;">Already a member?</h4>
+                        <br><a href="/login" class="btn btn-primary btn-lg" role="button" id="btn">Login</a>
+                    </div> 
                 </div>
                 <div class="item">
-                    <img src="/assets/landingpage4.png" alt="img4" style="width:100%;">
+                    <img src="/assets/landingpage4.png" alt="img4" style="width:100%; opacity: 0.6">
                 </div>
-                <div class="item">
-                    <img src="/assets/landingpage5.png" alt="img5" style="width:100%;">
-                </div>
+               <!-- <div class="item">
+                    <img src="/assets/landingpage5.png" alt="img5" style="width:100%; opacity: 0.6">
+                </div>-->
             </div>
             <!-- Left and right controls -->
             <a class="left carousel-control" href="#myCarousel" data-slide="prev">

@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
-	root	'welcome#index'
+    root	'welcome#index'
+    resources :users
 	
-  	get 	'/addnew', to:'users#new'
+  	get 	'/addnew_user', to:'users#new'
   	get		'/home',  to:'welcome#index'
   	get		'/aboutus',  to:'welcome#aboutus'
     get   '/contactus', to:'welcome#contactus'
@@ -10,11 +11,11 @@ Rails.application.routes.draw do
   	get 	'/dashboard', to:'agent#index'
   	get		'/profile',	to:'agent#show'
 
-	get  	'/login', to:'sessions#new'
-	post 	'/login', to:'sessions#create'
+    get  	'/login', to:'sessions#new'
+    post 	'/login', to:'sessions#create'
     get 	'/logout', to:'sessions#destroy'
   	
-  	resources :users
+  	
   	
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
