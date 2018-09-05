@@ -1,28 +1,39 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
-
-<h1>Listing Users</h1>
-<% if notice %>
-	<p id="notice"> <%= notice %>
-	</p>
-<% end %>
-<table>
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th></th>
-			<th></th>
-			<th></th>
-		</tr>
-	</thead>
-	<tbody>
-		<% @users.each do |user| %>
-		<tr>
-			<td><%= user.email %></td>
-			
-		</tr>
+<% if logged_in? && current_user.isadmin? %>
+	<%= render '/agent/navbarAgentPages' %>   <br><br><br>
+	<div class="container">
+		<h1>Listing Users</h1>
+		<% if notice %>
+			<p id="notice"> <%= notice %>
+			</p>
 		<% end %>
-	</tbody>
-</table>
-<br>
-<%= link_to 'Add New User', new_user_path %>
+		<table>
+			<thead>
+				<tr>
+					<th>Email</th>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @users.each do |user| %>
+				<tr>
+					<td><%= user.email %></td>
+					<%-#<% if current_user.isadmin? && !current_user?(user) %>
+		    			<%-#| <%= link_to "delete", user, method: :delete, data: { confirm: "You sure?" } %>
+		 			 <%-# <% end %>
+					
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+		<br>
+		<a href="/addnew_user" data-toggle="modal" data-target="#myModal">Add new User</a>
+		<div class="modal fade" id="myModal">
+ 			<div class="modal-dialog">
+  				<div class="modal-content">
+  				</div>
+			</div>
+		</div>
+		<br>
+<% end %>

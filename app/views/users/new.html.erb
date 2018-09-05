@@ -1,10 +1,20 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<% if logged_in? && current_user.isadmin? %>
 
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
 
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<h4 class="modal-title">Add New user</h4>
+		</div>
+		<div class="modal-body">
+		<%= render 'form' %>
+		</div>				
+	</body>
+</html>
 
-<h1>New user</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', users_path %>
+<% end %>

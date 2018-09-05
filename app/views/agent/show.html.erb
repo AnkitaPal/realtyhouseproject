@@ -88,6 +88,7 @@
             </script>
         </head>
         <body>
+            <% if current_user %>
             <%= render 'navbarAgentPages' %>
             <br><br>
             <div class="container">
@@ -130,7 +131,7 @@
                                     <label for="phno">Phone Number</label>
                                 </div>
                                 <div class="col-75">
-                                    <input type="number" id="phno" name="phonenumber" placeholder="Phone number..." min="10" max="10">
+                                    <input type="number" id="phno" name="user[ph_no]" placeholder="Phone number..." min="10" max="10">
                                 </div>
                             </div>
                             <div class="row">
@@ -190,5 +191,12 @@
                     </div>
                 </div>
       		</div>
+            <%else%>
+            <script type="text/javascript">
+                    alert('You are not authorized to this page');
+                    window.location = '/login';
+                </script>
+
+            <%end%>
 		</body>
 </html>

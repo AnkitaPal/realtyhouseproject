@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 	#before_action :set_user, only: [:show, :edit, :update, :destroy]
 	#skip_before_action :authorize, only: [:new, :create, :index]
+  
 
 	def index
 		@users = User.all
@@ -28,8 +29,22 @@ class UsersController < ApplicationController
   	end
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+
+    if(@user.update(user_details_params))
+      redirect_to '/dashboard', alert:"successfully updated profile"
+    else
+      redirect_to 'edit', alert:"Cannot Update profile"
+    end
+  end
+
   def destroy
-    @user.destroy
+    User.find(params[:id]).destroy
     respond_to do |format|
       format.html { redirect_to users_url }
       format.json { head :no_content }
@@ -41,9 +56,13 @@ class UsersController < ApplicationController
     def set_user
       @user = User.find(params[:id])
     end
-
+    
     # Never trust parameters from the scary internet, only allow the white list through.
-  def user_params
+    def user_params
       params.require(:user).permit(:email, :password)
+    end
+
+    def user_details_params
+      params.require(:user).permit(:f_name, :l_name, :ph_no, :gender)
     end
 end
